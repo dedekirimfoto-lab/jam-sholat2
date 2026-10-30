@@ -1,11 +1,16 @@
-// 1. Fungsi Jam Digital Berjalan
+// Medan menggunakan Waktu Indonesia Barat (WIB, Asia/Jakarta).
 setInterval(() => {
     const now = new Date();
-    document.getElementById('clock').innerText = now.toLocaleTimeString();
+    document.getElementById('clock').innerText = now.toLocaleTimeString('id-ID', {
+        timeZone: 'Asia/Jakarta',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    });
 }, 1000);
 
-// 2. Ambil Jadwal Sholat Otomatis (Contoh untuk kota Jakarta hari ini)
-fetch('https://api.aladhan.com/v1/timingsByCity?city=Jakarta&country=Indonesia&method=5')
+// Ambil jadwal sholat otomatis untuk Medan hari ini.
+fetch('https://api.aladhan.com/v1/timingsByCity?city=Medan&country=Indonesia&method=5')
     .then(response => response.json())
     .then(data => {
         const timings = data.data.timings;
