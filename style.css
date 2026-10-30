@@ -1,0 +1,33 @@
+body {
+    background-color: #0f172a; /* Warna gelap biar nyaman di mata */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.clock {
+    font-size: 48px;
+    font-weight: bold;
+    color: #38bdf8;
+    margin: 20px 0;
+}
+.schedule {
+    font-size: 20px;
+    text-align: left;
+    background: #334155;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+.schedule p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
